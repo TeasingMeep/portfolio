@@ -166,7 +166,7 @@ function initFilter(types, filterOptions, currentFilter, placesList) {
 }
 
 async function populate(main) {
-	const requestURL = `${window.location}/places.json`;
+	const requestURL = `https://nicholasraymondbalch.com/philly-places/places.json`;
 	const request = new Request(requestURL);
 
 	const response = await fetch(request);
