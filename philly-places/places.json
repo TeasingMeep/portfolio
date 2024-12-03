@@ -1,0 +1,303 @@
+{
+	"location": "Philly",
+	"places": [
+		{
+			"name": "Stumps in West Philly",
+			"type": ["plant shop"],
+			"description": "Cute but overpriced and closed"
+		},
+		{
+			"name": "Vault and Vine",
+			"type": ["cafe", "plant shop"],
+			"description": "Nice atmosphere, decent coffee, not a lot of food",
+			"addresss": "3507 Midvale Ave, Philadelphia, PA 19129"
+		},
+		{
+			"name": "Cafe Musette",
+			"type": ["cafe"],
+			"description": "Hipseter",
+			"addresss": "2441 Aspen St, Philadelphia, PA 19130"
+		},
+		{
+			"name": "Andra Hem",
+			"type": ["bar", "small bites", "cocktails"],
+			"description": "Amazing food, good drinks, decent price",
+			"addresss": "218 S 16th St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Black Sheep",
+			"type": ["bar", "resturant", "pub"],
+			"description": "Standard Irish bar with a great shepards pie",
+			"addresss": "247 S 17th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Good Dog",
+			"type": ["bar", "resturant", "pub", "happy hour"],
+			"description": "Generic bar with a decent happy hour",
+			"addresss": "224 S 15th St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Barnes Foundation",
+			"type": ["museum", "art"],
+			"description": "Very weird and fun. Not worth full price but great if there is a discount",
+			"addresss": "2025 Benjamin Franklin Pkwy, Philadelphia, PA 19130"
+		},
+		{
+			"name": "Knead Bagel",
+			"type": ["breakfast", "coffee"],
+			"description": "great coffee mediocre bagels and sandwiches. Great sausage.",
+			"addresss": "725 Walnut St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Cherry Street Pier",
+			"type": ["beer garden", "art"],
+			"description": "Primarly an art studio but has events with drinks and open studios",
+			"addresss": "725 Walnut St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Butchers Bar",
+			"type": ["beer"],
+			"description": "Shitty bar, gives frat energy",
+			"addresss": "2034 Chestnut St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Brü Craft & Wurst",
+			"type": ["bar"],
+			"description": "Attempts be a German rave at night. Never been during the day",
+			"addresss": "1318 Chestnut St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Prohibition Taproom",
+			"type": ["bar", "cocktails", "resturant"],
+			"description": "Attempts be a German rave at night. Never been during the day",
+			"addresss": "501 N 13th St, Philadelphia, PA 19123"
+		},
+		{
+			"name": "The Bok Bar",
+			"type": ["bar", "rooftop", "view"],
+			"description": "Great view, fun events, ok prices",
+			"addresss": "800 Mifflin St, Philadelphia, PA 19148"
+		},
+		{
+			"name": "Assembly",
+			"type": ["bar", "cocktails", "rooftop", "view"],
+			"description": "Sticky views, overpriced, great view",
+			"addresss": "1840 Benjamin Franklin Pkwy, Philadelphia, PA 19103"
+		},
+		{
+			"name": "OCF Coffee House",
+			"type": ["small bites", "coffee"],
+			"description": "Convient, ok food and coffee. Closed"
+		},
+		{
+			"name": "Two Robber",
+			"type": ["resturant", "happy hour", "cocktails"],
+			"description": "Weak ass smash burger, interesting cocktails",
+			"address": "1221 Frankford Ave, Philadelphia, PA 19125"
+		},
+		{
+			"name": "Johnny Brenda",
+			"type": ["resturant", "happy hour", "music venue"],
+			"description": "Bomb ass smash burger for happy hour. Great venue",
+			"address": "1201 Frankford Ave, Philadelphia, PA 19125"
+		},
+		{
+			"name": "Frankford Hall",
+			"type": ["bar", "small bites", "outdoors", "beer garden"],
+			"description": "Cool place, ok beer, nice ambiance",
+			"address": "1210 Frankford Ave, Philadelphia, PA 19125"
+		},
+		{
+			"name": "Moshulu",
+			"type": ["bar", "small bites", "resturant", "happy hour", "unique", "view"],
+			"description": "Amazing environment, great view of the city, ok prices",
+			"address": "401 S Christopher Columbus Blvd, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Morgan's Pier",
+			"type": ["bar", "view"],
+			"description": "Shitty bar, shitty people, good view of the bridge",
+			"address": "401 S Christopher Columbus Blvd, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Butcher and Singer",
+			"type": ["bar", "resturant", "unique"],
+			"description": "Spectacular, amazing",
+			"address": "1500 Walnut St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "a.kitchen+bar",
+			"type": ["bar", "resturant", "quiet"],
+			"description": "Killer food, great drinks, nice atmosphere",
+			"address": "135 S 18th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Writes Block",
+			"type": ["bar"],
+			"description": "Fake book wallpaper, not worth it",
+			"address": "1342 Cypress St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "PHS Beer Garden",
+			"type": ["beer garden", "outdoors", "seasonal"],
+			"description": "Beautiful",
+			"address": "1438 South St, Philadelphia, PA 19146"
+		},
+		{
+			"name": "Barcade",
+			"type": ["bar", "unique"],
+			"description": "Bar with an arcade. Need cash for tokens",
+			"address": "1114 Frankford Ave, Philadelphia, PA 19125"
+		},
+		{
+			"name": "Philadelphia Distilling",
+			"type": ["distillary", "cocktails"],
+			"description": "Gin Distillery",
+			"address": "25 E Allen St, Philadelphia, PA 19123"
+		},
+		{
+			"name": "McNally's Tavern",
+			"type": ["bar", "pub", "resturant", "tavern"],
+			"description": "Fucking bomb ass sandwich (schmitter)",
+			"address": "8634 Germantown Ave, Philadelphia, PA 19118"
+		},
+		{
+			"name": "Fountain Porter",
+			"type": ["bar"],
+			"description": "Ok beer, small food selection, supposedly amazing burgers",
+			"address": "1601 S 10th St, Philadelphia, PA 19148"
+		},
+		{
+			"name": "Huda",
+			"type": ["resturant", "quick bite", "lunch"],
+			"description": "One of the best sandwich spots in the city",
+			"address": "32 S 18th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "The Foundry",
+			"type": ["music venue"],
+			"description": "",
+			"address": "29 E Allen St, Philadelphia, PA 19123"
+		},
+		{
+			"name": "Bud and Marilyn's",
+			"type": ["resturant"],
+			"description": "Ok chicken and vegetarian meals",
+			"address": "1234 Locust St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Harp and Crown",
+			"type": ["bar", "happy hour", "resturant"],
+			"description": "Happy hour place that gets loud",
+			"address": "1525 Sansom St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "JG Sky Lounge",
+			"type": ["bar", "resturant", "view", "unique"],
+			"description": "Everything is ok but the view",
+			"address": "One N 19th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Tapster",
+			"type": ["bar"],
+			"description": "Self serve, weird, can bring your own food",
+			"address": "1601 Sansom St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "The Couch Tomato",
+			"type": ["bar", "resturant"],
+			"description": "Good food, casual vibes",
+			"address": "102 Rector St, Philadelphia, PA 19127"
+		},
+		{
+			"name": "The Plough & the Stars",
+			"type": ["bar", "resturant", "pub"],
+			"description": "Great fish and chips, good service, go to Black Sheep for shepard pie",
+			"address": "123 Chestnut Street Entrance on, N 2nd St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Hilltown Tavern",
+			"type": ["bar", "resturant", "pub"],
+			"description": "Neighborhoodly, cheesy,impressive side salad",
+			"address": "795 N 24th St, Philadelphia, PA 19130"
+		},
+		{
+			"name": "National Mechanics",
+			"type": ["bar"],
+			"description": "Captivating exterior, depressing interiors",
+			"address": "22 S 3rd St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Milkboy South Philly",
+			"type": ["bar", "resturant", "Venue"],
+			"description": "Bomb chicken sandwich, oddly questionable pickles (in a good way)",
+			"address": "401 South St, Philadelphia, PA 19147"
+		},
+		{
+			"name": "Local 44",
+			"type": ["bar"],
+			"description": "It's ok with fair prices",
+			"address": "4333 Spruce St, Philadelphia, PA 19104"
+		},
+		{
+			"name": "The Library",
+			"type": ["bar"],
+			"description": "Weirdly, a good place to read",
+			"address": "210 W Rittenhouse Square, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Era",
+			"type": ["bar", "resturant"],
+			"description": "I would kill a man for their food. Ethiopian place",
+			"address": "2743 Poplar St, Philadelphia, PA 19130"
+		},
+		{
+			"name": "Strangelove",
+			"type": ["bar", "resturant"],
+			"description": "Had agreat bartender for lunch",
+			"address": "216 S 11th St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Good Karma",
+			"type": ["cafe"],
+			"description": "Cute exterior, didn't try food or coffee",
+			"address": "265 Broad St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Vibrant",
+			"type": ["cafe"],
+			"description": "Decent coffee, pretty small but good option for mornings",
+			"address": "222 W Rittenhouse Square 1st Floor, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Silk City",
+			"type": ["bar", "resturant", "unique"],
+			"description": "Novel atmosphere, good food, get a beer or a well drink",
+			"address": "435 Spring Garden St, Philadelphia, PA 19123"
+		},
+		{
+			"name": "The Bishops Collar",
+			"type": ["bar", "resturant"],
+			"description": "Run of the mill dive. Another neighborhood hangout in Fairmount",
+			"address": "2349 Fairmount Ave, Philadelphia, PA 19130"
+		},
+		{
+			"name": "Woodies",
+			"type": ["club"],
+			"description": "Really chaotic, fun, might get drugged",
+			"address": "202 S 13th St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Charlie was a Sinner",
+			"type": ["bar", "resturant"],
+			"description": "good foo",
+			"address": "202 S 13th St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Federal Donuts",
+			"type": ["breakfast", "lunch"],
+			"description": "Not much to say but great donuts",
+			"address": "1909 Sansom St, Philadelphia, PA 19103"
+		}
+	]
+}
