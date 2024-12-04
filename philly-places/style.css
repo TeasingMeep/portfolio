@@ -472,13 +472,23 @@ main {
 /* ========================== */
 /* FILTER CONTAINER */
 /* ========================== */
+.filter-container {
+	margin-bottom: 3rem;
+}
+
 .filter-container .filter {
 	padding-left: 0;
+	padding-right: 0;
 }
 .filter-container #filter-options {
 	margin: 0.1rem 0 0;
-	opacity: 0;
+	font-size: 0.7rem;
 	transition: opacity 1s;
+}
+@media screen and (min-width: 45em) {
+	.filter-container #filter-options {
+		opacity: 0;
+	}
 }
 .filter-container:hover #filter-options,
 .filter-container.reveal-filter-list #filter-options {
@@ -496,6 +506,7 @@ main {
 }
 .filter-container #filter-options li button {
 	padding-left: 0;
+	padding-right: 0;
 }
 /* ========================== */
 /* PLACESS CONTAINER */
