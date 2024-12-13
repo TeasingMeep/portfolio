@@ -303,7 +303,13 @@
 			"name": "High Street",
 			"type": ["dinner", "lunch", "bar","resturant"],
 			"description": "Amazing atmpsphere, food, and drinks.",
-			"address": "101 S 9TH ST PHILALDELPHIA"
+			"address": "101 S 9th St Philadelphia, PA 19454"
+		},
+		{
+			"name": "Superfolie",
+			"type": ["happy hour","bar","resturant"],
+			"description": "Nice place. Small and loud. more of an upbeat, younger vibe.",
+			"address": "1602 Spruce St, Philadelphia, PA 19103"
 		}
 	]
 }
