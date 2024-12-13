@@ -442,6 +442,6 @@
 			"type": ["bar", "quick bite", "happy hour"],
 			"description": "Grunge bar with vegan food and novel cocktails.",
 			"address": "530 South St, Philadelphia, PA 19147"
-		},
+		}
 	]
 }
