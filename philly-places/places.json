@@ -4,7 +4,7 @@
 		{
 			"name": "Stumps in West Philly",
 			"type": ["plant shop"],
-			"description": "Cute but overpriced and closed"
+			"description": "Cute but overpriced. Closed"
 		},
 		{
 			"name": "Vault and Vine",
@@ -56,7 +56,7 @@
 		},
 		{
 			"name": "Butchers Bar",
-			"type": ["beer"],
+			"type": ["bar"],
 			"description": "Shitty bar, gives frat energy",
 			"addresss": "2034 Chestnut St, Philadelphia, PA 19103"
 		},
@@ -229,7 +229,7 @@
 		},
 		{
 			"name": "Milkboy South Philly",
-			"type": ["bar", "resturant", "Venue"],
+			"type": ["bar", "resturant", "music venue"],
 			"description": "Bomb chicken sandwich, oddly questionable pickles (in a good way)",
 			"address": "401 South St, Philadelphia, PA 19147"
 		},
@@ -310,6 +310,138 @@
 			"type": ["happy hour","bar","resturant"],
 			"description": "Nice place. Small and loud. more of an upbeat, younger vibe.",
 			"address": "1602 Spruce St, Philadelphia, PA 19103"
-		}
+		},
+		{
+			"name": "Bagels & Co",
+			"type": ["quick bite","breakfast","lunch"],
+			"description": "Bagel spot with ok food. Not worth the price imo.",
+			"address": "1526 Sansom St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Mission Taqueria",
+			"type": ["bar","resturant","lunch"],
+			"description": "Texmex place. Shitty drinks, fratboy vibes at night, good tacos and amazing looking burittos.",
+			"address": "Above Oyster House, 1516 Sansom St 2nd Floor, Philadelphia, PA 19102"
+		},
+		{
+			"name": "In Riva",
+			"type": ["resturant","lunch", "dinner"],
+			"description": "Cute place in East Falls. Had a 'chefs choice' option that could feed a family of 5.",
+			"address": "4116 Ridge Ave, Philadelphia, PA 19129"
+		},
+		{
+			"name": "Bar Jawn",
+			"type": ["bar","resturant","lunch", "dinner"],
+			"description": "Good food, decent location, kinda small but not complaining.",
+			"address": "4247 Main St, Philadelphia, PA 19127"
+		},
+		{
+			"name": "Fat Lady Brewing",
+			"type": ["brewery"],
+			"description": "Good food, decent location, kinda small but not complaining.",
+			"address": "4247 Main St, Philadelphia, PA 19127"
+		},
+		{
+			"name": "DanDan",
+			"type": ["lunch"],
+			"description": "Great noodles. Everything is made with peanuts (it's very depressing).",
+			"address": "126 S 16th St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Parc",
+			"type": ["dinner", "resturant"],
+			"description": "Packed, loud, food is ok. Everything feels rushed and not worth it.",
+			"address": "227 S 18th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Rouge",
+			"type": ["dinner", "resturant", "bar"],
+			"description": "Another place in Rittenhouse.",
+			"address": "205 S 18th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Kismet Bagels",
+			"type": ["lunch", "breakfast", "quick bite"],
+			"description": "Amazing bagels, great creamcheese, and I wish it was closer to the office.",
+			"address": "1700 Sansom St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "The Dandelion",
+			"type": ["happy hour", "bar", "resturant"],
+			"description": "An interesting british feel. It's a small place with a tight bar",
+			"address": "124 S 18th St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Marathon Grill",
+			"type": ["resturant", "lunch"],
+			"description": "Decent lunch spot.",
+			"address": "121 S 16th St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Big Ass Slices Bar & Grill",
+			"type": ["lunch", "quick bite", "bar"],
+			"description": "The name says it all.",
+			"address": "224 Market St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Malooga",
+			"type": ["resturant", "dinner"],
+			"description": "Has a unique seating spot that requires you to take your shoes off.",
+			"address": "134 Chestnut St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "Monk's Cafe",
+			"type": ["resturant", "dinner", "bar", "lunch"],
+			"description": "A tight space with good food, cozy vibes, and a great beer selection",
+			"address": "264 S 16th St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Elixr Coffee Roasters",
+			"type": ["cafe", "coffee"],
+			"description": "Great coffee, not much food. It's my go to coffee when working.",
+			"address": "207 S Sydenham St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "W Philadelphia",
+			"type": ["bar"],
+			"description": "A hotel bar with a luxuary feel.",
+			"address": "1439 Chestnut St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "XIX (Nineteen) Restaurant",
+			"type": ["bar", "resturant"],
+			"description": "A hotel bar in the Belview. Sadly, it's permanently closed.",
+			"address": "200 S Broad St 19th floor, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Enswell",
+			"type": ["bar", "resturant", "cafe"],
+			"description": "A fusion of cafe and bar. They do both well.",
+			"address": "1528 Spruce St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Fork",
+			"type": ["bar", "resturant", "dinner"],
+			"description": "Perfection.",
+			"address": "306 Market St, Philadelphia, PA 19106"
+		},
+		{
+			"name": "HipCityVeg",
+			"type": ["quick bite", "lunch", "dinner"],
+			"description": "Vegan fast food.",
+			"address": "North American Building, 121 S Broad St, Philadelphia, PA 19107"
+		},
+		{
+			"name": "Victory Brewing Company",
+			"type": ["brewery", "bar", "happy hour"],
+			"description": "Decent views, good beer, food is what you would expect.",
+			"address": "1776 Benjamin Franklin Pkwy, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Tattooed Mom",
+			"type": ["bar", "quick bite", "happy hour"],
+			"description": "Grunge bar with vegan food and novel cocktails.",
+			"address": "530 South St, Philadelphia, PA 19147"
+		},
 	]
 }
