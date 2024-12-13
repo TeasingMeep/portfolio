@@ -298,6 +298,12 @@
 			"type": ["breakfast", "lunch"],
 			"description": "Not much to say but great donuts",
 			"address": "1909 Sansom St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "High Street",
+			"type": ["dinner", "lunch", "bar","resturant"],
+			"description": "Amazing atmpsphere, food, and drinks.",
+			"address": "101 S 9TH ST PHILALDELPHIA"
 		}
 	]
 }
