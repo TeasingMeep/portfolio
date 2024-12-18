@@ -491,6 +491,11 @@ main {
 #small-projects ul {
 	margin-top: 0;
 }
+#small-projects ul li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
 /* ========================== */
 /* FOOTER CONTAINER */
 /* ========================== */
