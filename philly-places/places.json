@@ -496,6 +496,24 @@
 			"type": ["bar"],
 			"description": "An old dive in center city. The front is recently renovated and haven't been.",
 			"address": "118 S 16th St, Philadelphia, PA 19102"
-		}
+		},
+		{
+			"name": "Dizengoff",
+			"type": ["resturant", "lunch"],
+			"description": "Used to be a quick stop. Now it's a site down restaurant and does lunch to go. After lunch you cannot order to go.",
+			"address": "1625 Sansom St, Philadelphia, PA 19103"
+		},
+		{
+			"name": "Tuscany Cafe",
+			"type": ["cafe"],
+			"description": "Convient lunch spot with a small selection of options",
+			"address": "230 S Broad St, Philadelphia, PA 19102"
+		},
+		{
+			"name": "Brooklyn Dumpling Shop",
+			"type": ["lunch", "quick bite"],
+			"description": "Quick spot with good dumplings. It feels kinda healthy but I have no idea if it is.",
+			"address": "1504 Sansom St, Philadelphia, PA 19102"
+		},
 	]
 }
