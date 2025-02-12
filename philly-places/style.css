@@ -454,7 +454,11 @@ button:hover {
 	border-bottom: 0.05rem solid #000;
 	cursor: pointer;
 }
-
+svg {
+	width: 100%;
+	height: auto;
+	display: block;
+}
 /* ========================== */
 /* BODY CONTAINER */
 /* ========================== */
@@ -474,11 +478,17 @@ main {
 /* ========================== */
 .filter-container {
 	margin-bottom: 3rem;
+	position: relative;
+}
+.description-view .filter-container .filter-container-inner-container {
+	opacity: 0;
 }
 
 .filter-container .filter {
+	display: inline;
 	padding-left: 0;
 	padding-right: 0;
+	font-weight: 500;
 }
 .filter-container #filter-options {
 	margin: 0.1rem 0 0;
@@ -515,7 +525,19 @@ main {
 	padding: 0;
 	width: 85%;
 	max-width: 60rem;
+	min-height: calc(100vh - 20rem);
+	min-height: calc(100svh - 20rem);
+	opacity: 0;
 }
+.description-view .places-loaded #places-container {
+	opacity: 0;
+	transition: none;
+}
+.places-loaded #places-container {
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+}
+
 #places-container #places-list[filter="filtered"] {
 	column-count: 1;
 }
@@ -534,6 +556,7 @@ main {
 #places-container #places-list li {
 	margin-bottom: 0.25rem;
 }
+
 #places-container #places-list[filter="filtered"] li {
 	opacity: 0;
 	display: none;
@@ -551,7 +574,7 @@ main {
 	padding-left: 0;
 	padding-top: 2rem;
 }
-.filtered #clear-filter {
+body:not(.description-view) .filtered #clear-filter {
 	opacity: 1;
 }
 /* ========================== */
@@ -621,6 +644,38 @@ main {
 }
 #place-overlay button {
 	padding-left: 0;
+}
+
+/* ========================== */
+/* 	PROJECT DESCRIPTION */
+/* ========================== */
+#description-button {
+	font-size: 0.9rem;
+}
+#project-description {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100svh;
+	padding: 0;
+	z-index: 200;
+	opacity: 0;
+	pointer-events: none;
+}
+.description-view #project-description {
+	opacity: 1;
+	pointer-events: all;
+}
+
+#project-description p {
+	margin-bottom: 1rem;
+	line-height: 1.65;
+	font-size: 0.9em;
+	max-width: 36rem;
 }
 /* ========================== */
 /* FOOTER CONTAINER */
