@@ -4,120 +4,202 @@ var s1 = window.pageYOffset,
 	s2,
 	scrollTimeout,
 	windowHeight = window.innerHeight,
-	gridItems,
-	headerHeight,
-	scrollElements = document.querySelectorAll(".scroll-element");
+	windowWidth = window.innerWidth;
 
 var documentReady = function () {
-	let isHome = document.body.classList.contains("home");
-
-	scrollElements = document.querySelectorAll(".scroll-element");
-	const siteHeader = document.getElementById("site-header");
 	const mainContainer = document.querySelector("main");
-	throttledScrollEvents();
+	const filterContainer = mainContainer.querySelector(".filter-container");
+	populate(mainContainer);
 	document.body.classList.add("initiated");
-	// headerEventListener(siteHeader);
+
+	const overlayClose = document.body.querySelector(".overlay-close");
+	if (overlayClose) overlayClose.addEventListener("click", closeOverlay);
+
+	const descriptionOverlayButton = document.getElementById("description-button");
+	if (descriptionOverlayButton) descriptionOverlayButton.addEventListener("click", revealDescriptionOverlay);
 };
 
-function headerEventListener(siteHeader) {
-	if (!siteHeader && document.body.classList.contains("home")) return;
-	headerHeight = siteHeader.offsetHeight;
+function revealDescriptionOverlay(event) {
+	const target = event.target;
+	const targetText = target.innerText;
 
-	// Header load animation
-	let headerTimeout = 350;
-	const headerH1Spans = siteHeader.querySelectorAll("h1 span");
-	for (let i = 0; i < headerH1Spans.length; i++) {
-		const span = headerH1Spans[i];
-		setTimeout(() => {
-			span.style.opacity = 1;
-		}, headerTimeout);
+	if (targetText === "about") target.innerText = "revert";
+	else target.innerText = "about";
+	document.body.classList.toggle("description-view");
+}
 
-		if (i === headerH1Spans.length - 2) {
-			setTimeout(() => {
-				document.body.classList.add("initiated");
-			}, headerTimeout);
+function closeOverlay() {
+	const overlayInnerContainer = document.body.querySelector(".overlay-inner-container");
+	document.body.classList.add("remove-overlay");
+	setTimeout(() => {
+		document.body.classList.remove("remove-overlay");
+		document.body.classList.remove("reveal-overlay");
+		overlayInnerContainer.remove();
+	}, 1000);
+}
+
+async function populatePlaces(places = null, placesList = null) {
+	if (places === null || placesList === null) return "no content or missing html element";
+	const types = {};
+
+	function typeFormatter(type) {
+		/**
+		 * Check and format the type variable. lowercase, hyphinated, no unique characters
+		 */
+		let formattedType = "";
+		if (typeof type === "object") {
+			type.forEach((option) => {
+				let formattedOption = option.toLowerCase().trim().replace(" ", "-");
+				if (!types.hasOwnProperty(formattedOption)) {
+					types[formattedOption] = option;
+				}
+				formattedType += `${formattedOption} `;
+			});
+		} else {
+			formattedType = type.toLowerCase().trim().replace(" ", "-");
 		}
-		headerTimeout += 350;
+		return formattedType;
 	}
+
+	// Create place element
+	function createHTMLElemnt(place, type) {
+		const revealOverlay = (event) => {
+			let target = event.target,
+				overlayContainer = document.querySelector("#place-overlay"),
+				overlayInnerContainer = document.createElement("div");
+			overlayInnerContainer.className = "overlay-inner-container";
+
+			const targetDescription = target.getAttribute("data-description");
+			const targetAddress = target.getAttribute("data-address");
+			const targetName = `${typeFormatter(target.getAttribute("data-name"))}`;
+
+			let paraElement = document.createElement("p"),
+				titleElement = document.createElement("h2"),
+				overlayPrimaryContentContainer = document.createElement("div"),
+				addressElement = document.createElement("address");
+			overlayPrimaryContentContainer.className = "primary-content-container";
+			titleElement.innerText = target.innerText;
+			paraElement.innerText = targetDescription;
+			addressElement.innerText = targetAddress;
+
+			overlayPrimaryContentContainer.appendChild(titleElement);
+			overlayPrimaryContentContainer.appendChild(paraElement);
+			overlayInnerContainer.appendChild(overlayPrimaryContentContainer);
+			overlayInnerContainer.appendChild(addressElement);
+
+			overlayContainer.prepend(overlayInnerContainer);
+			document.body.classList.add("reveal-overlay");
+		};
+
+		const li = document.createElement("li");
+		const button = document.createElement("button");
+
+		button.innerText = place.name;
+		button.setAttribute("data-description", place.description);
+		button.setAttribute("data-name", typeFormatter(place.name));
+		if (place.address) button.setAttribute("data-address", place.address);
+		button.setAttribute("data-type", type);
+		button.setAttribute("aria-pressed", "false");
+
+		button.addEventListener("click", revealOverlay);
+
+		li.appendChild(button);
+		return li;
+	}
+
+	let index = 0;
+	for (const place of places) {
+		const placeType = typeFormatter(place.type);
+		const placeItem = createHTMLElemnt(place, placeType);
+		placesList.appendChild(placeItem);
+	}
+
+	return types;
 }
 
-/**
- *
- * STANDARD FUNCTIONS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- *
- * */
-function throttledScrollEvents() {
-	s1 = window.pageYOffset; // current scroll position
-	s1 && s2 && s1 > 0 && s1 > s2 ? document.body.classList.add("scrolling-down") : document.body.classList.remove("scrolling-down");
-
-	if (s2 && s2 > 100) {
-		document.body.classList.add("scrolled");
-		document.body.classList.add("page-scrolled");
-	} else {
-		document.body.classList.remove("scrolled");
+function initFilter(types, filterOptions, currentFilter, placesList) {
+	function clearFilter() {
+		const activePlaces = placesList.querySelectorAll(".active");
+		if (activePlaces.length) {
+			activePlaces.forEach((place) => place.classList.remove("active"));
+		}
+		currentFilter.innerText = "";
+		placesList.removeAttribute("filter");
+		document.body.querySelector("main").classList.remove("filtered");
 	}
 
-	s1 + s2 / 2 >= document.body.scrollHeight - 100 ? document.body.classList.add("scrolled-to-bottom") : document.body.classList.remove("scrolled-to-bottom");
-
-	if (typeof scrollElements !== "undefined" && scrollElements !== null) {
-		Array.prototype.forEach.call(scrollElements, function (elem) {
-			if (isScrolledIntoView(elem) === true) {
-				elem.classList.add("in-view");
-			} else {
-				elem.classList.remove("in-view");
+	let updateFilter = (event) => {
+		function filterPlaces(type, placesToFilter) {
+			const activePlaces = placesList.querySelectorAll(".active");
+			if (activePlaces.length) {
+				activePlaces.forEach((place) => place.classList.remove("active"));
 			}
-		});
+
+			let filteredPlaces = placesToFilter.filter((place) => place.getAttribute("data-type").indexOf(type) >= 0);
+			for (let index = 0; index < filteredPlaces.length; index++) {
+				const elementToFilter = filteredPlaces[index];
+				const elementParent = elementToFilter.parentElement;
+				elementParent.classList.add("active");
+			}
+			placesList.setAttribute("filter", "filtered");
+
+			if (filteredPlaces.length > 20) {
+				placesList.setAttribute("filter-style", "three-columns");
+			} else if (filteredPlaces.length > 30) {
+				placesList.setAttribute("filter-style", "two-columns");
+			} else {
+				placesList.removeAttribute("filter-style");
+			}
+		}
+
+		const target = event.target;
+		const dataType = target.getAttribute("data-type");
+		const placesElementArray = Array.from(placesList.querySelectorAll("button"));
+		filterPlaces(dataType, placesElementArray);
+		placesList.closest("main").classList.add("filtered");
+		currentFilter.innerText = target.innerText;
+	};
+
+	for (const type in types) {
+		// Create filter element
+		const li = document.createElement("li");
+		const button = document.createElement("button");
+		button.innerText = types[type];
+		button.setAttribute("data-type", type);
+		// Add function
+		button.addEventListener("click", updateFilter);
+		// Add to filter bar
+		li.appendChild(button);
+		filterOptions.appendChild(li);
 	}
+	const clearFilterElement = document.body.querySelector("#clear-filter");
 
-	s2 = window.pageYOffset; // new scroll position
+	if (clearFilterElement) clearFilterElement.addEventListener("click", clearFilter);
 }
 
-function isScrolledIntoView(elem) {
-	var docViewTop = s1;
-	var docViewBottom = docViewTop + windowHeight;
-	var threshold = windowHeight * 0.1;
+async function populate(main) {
+	const requestURL = `https://nicholasraymondbalch.com/philly-places/places.json`;
+	const request = new Request(requestURL);
 
-	var elemTop = elem.offsetTop;
-	var elemBottom = elemTop + elem.offsetHeight;
+	const response = await fetch(request);
+	const places = await response.json();
 
-	/* one-way fade (elements are revealed upon scroll, but never hidden) */
-	return elemTop <= docViewBottom;
+	main.querySelector("h1 span").innerText = places.location; // Populate header
 
-	/* two-way fade (elements are revealed on scroll, and are hidden when out of view) */
-	return elemTop <= docViewBottom + threshold && elemBottom >= docViewTop + threshold;
+	const filterOptions = main.querySelector("#filter-options");
+	const currentFilter = main.querySelector("#current-filter");
+	const placesList = main.querySelector("#places-list");
+	const types = await populatePlaces(places.places, placesList);
+	main.classList.add("places-loaded");
+	initFilter(types, filterOptions, currentFilter, placesList);
 }
-
-// Put all scroll events in throttledScrollEvents()
-window.addEventListener("scroll", function (e) {
-	if (!scrollTimeout) {
-		scrollTimeout = setTimeout(function () {
-			throttledScrollEvents();
-			scrollTimeout = null;
-		}, 200);
-	}
-});
-
-window.addEventListener("resize", function () {
-	windowHeight = window.innerHeight;
-});
-
-// Set true browser height
-var vh = window.innerHeight * 0.01,
-	windowWidth = window.innerWidth;
-function setTrueBrowserHeight() {
-	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-	var vh = window.innerHeight * 0.01;
-	// Then we set the value in the --vh custom property to the root of the document
-	document.documentElement.style.setProperty("--vh", vh + "px");
-}
-setTrueBrowserHeight();
 
 window.addEventListener("resize", function () {
 	// Checks to see if the window width has changed before updating --vh
 	if (window.innerWidth !== windowWidth || windowWidth > 400) {
 		windowWidth = window.innerWidth;
-		setTrueBrowserHeight();
 	}
+	windowHeight = window.innerHeight;
 });
 
 // Document Ready Listener

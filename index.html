@@ -2,34 +2,54 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Nick Balch</title>
-	<link rel="stylesheet" href="style.css" />
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Philly Places</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,400;1,500;1,600;1,900&family=Quicksand:wght@400;500;600&family=Raleway:ital,wght@0,200;1,100;1,200&family=Urbanist:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap"
 		rel="stylesheet" />
+	<link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="home">
+<body>
 	<main>
-		<section id="introduction">
-			<p>Hi, <br />I develop and help design websites.</p>
+		<h1>
+			<span id="location"></span> Places<button id="description-button">about</button>
+		</h1>
+		<div class="filter-container">
+			<div class="filter-container-inner-container">
+				<p class="filter">Filter</p>: <span id="current-filter"></span>
+				<ul id="filter-options">
+				</ul>
+			</div>
+			<section id="project-description">
+				<div class="inner-container">
+					<p>This project is a growing collection of places I have visited in Philly. When I first moved to the city, I wanted to experience it to the fullest. I started going out
+						constantly. I
+						realized how many places there were and how horrible my memory was. To keep track, I made notes: a collection of places, what they are, a short description to remind myself,
+						and
+						sometimes a picture. I used it as a way to recommend places, find a quick bite, and sometimes a way to remember some good and bad times.</p>
+
+					<p>As the list grew, it became increasingly difficult to manage. At work, I had started making filters for a few clients. In my free time, I wanted to build out my portfolio. I
+						realized the list was a dataset; I knew how to create a rudimentary filter, and I wanted to share my exploration of the city.</p>
+
+					<p>The list isn't complete. It's going to grow as time goes on. It's going to change too. I have plans to modify, refine, and expand the list. The initial list wasn't intended for
+						the
+						public, so the descriptions won't make sense. Maybe in the future, I'll return to the places, refine the description, and give a proper review.</p>
+				</div>
+			</section>
+		</div>
+
+		<section id="places-container">
+			<div class="places-inner-container">
+				<ul id="places-list">
+				</ul>
+			</div>
 		</section>
-		<section id="work">
-			<p>Currently, I'm employed at <a href="https://dyadcom.com" target="_blank">Dyad</a>.</p>
-		</section>
-		<section id="small-projects">
-			<h2>small projects</h2>
-			<ul>
-				<li><a href="/philly-places/index.html">places</a></li>
-				<li><a href="/photos/index.html">photos</a></li>
-			</ul>
-		</section>
+		<button id="clear-filter">clear filter</button>
+
 
 	</main>
 	<footer id="colophon">
@@ -39,14 +59,14 @@
 				<a href="mailto:nickbalch1997@gmail.com">nickbalch1997@gmail.com</a>
 			</li>
 			<li>(484) 300-7754</li>
-			<!-- <li>Date / Time</li> -->
 		</ul>
 	</footer>
+
+	<section id="place-overlay">
+		<button class="overlay-close">close</button>
+	</section>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
-<script src="main.js"></script>
+<script src="./js/main.js"></script>
 
 </html>
