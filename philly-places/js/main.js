@@ -14,7 +14,19 @@ var documentReady = function () {
 
 	const overlayClose = document.body.querySelector(".overlay-close");
 	if (overlayClose) overlayClose.addEventListener("click", closeOverlay);
+
+	const descriptionOverlayButton = document.getElementById("description-button");
+	if (descriptionOverlayButton) descriptionOverlayButton.addEventListener("click", revealDescriptionOverlay);
 };
+
+function revealDescriptionOverlay(event) {
+	const target = event.target;
+	const targetText = target.innerText;
+
+	if (targetText === "about") target.innerText = "revert";
+	else target.innerText = "about";
+	document.body.classList.toggle("description-view");
+}
 
 function closeOverlay() {
 	const overlayInnerContainer = document.body.querySelector(".overlay-inner-container");
@@ -113,7 +125,7 @@ function initFilter(types, filterOptions, currentFilter, placesList) {
 		}
 		currentFilter.innerText = "";
 		placesList.removeAttribute("filter");
-		placesList.closest("section").classList.remove("filtered");
+		document.body.querySelector("main").classList.remove("filtered");
 	}
 
 	let updateFilter = (event) => {
@@ -178,6 +190,7 @@ async function populate(main) {
 	const currentFilter = main.querySelector("#current-filter");
 	const placesList = main.querySelector("#places-list");
 	const types = await populatePlaces(places.places, placesList);
+	main.classList.add("places-loaded");
 	initFilter(types, filterOptions, currentFilter, placesList);
 }
 
