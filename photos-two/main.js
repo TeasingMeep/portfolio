@@ -23,6 +23,8 @@ var documentReady = function () {
 function heartSliderEvents(mainContainer) {
 	const heartSlideshowElement = mainContainer.querySelector('.heart-slideshow')
 	if(!heartSlideshowElement) return console.log('no element');
+
+	console.log(heartSlideshowElement);
 	
 	const heartSlider = new HeartSlider({
 		slideshow: heartSlideshowElement,
