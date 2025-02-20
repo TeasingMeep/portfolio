@@ -461,12 +461,7 @@ main {
 }
 
 .text-holder {
-	padding-bottom: 4.2rem;
-}
-@media screen and (min-width: 500px) {
-	.text-holder {
-		padding-bottom: 2.1rem;
-	}
+	padding-bottom: 2.1rem;
 }
 @media screen and (min-width: 40em) {
 	.text-holder {
