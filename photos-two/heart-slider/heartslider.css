@@ -55,13 +55,14 @@
 
 .heart-slide .image-holder {
 	pointer-events: none;
-	width: calc(100vh - 24rem);
+	width: calc(100vh - 26rem);
 	height: 100%;
 	margin: 0;
 	position: relative;
 }
 @media screen and (min-width:40em) {
 	.heart-slide .image-holder{
+	width: calc(100vh - 24rem);
 		margin-left: auto;
 	}
 }
