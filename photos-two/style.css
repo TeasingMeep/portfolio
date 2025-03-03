@@ -453,15 +453,17 @@ main {
 	padding-top: 0;
 }
 
-@media screen and (min-width: 750px) {
-	
-	article {
-		padding-right: 1rem;
-	}
+article {
+	padding-right: 1rem;
 }
 
 .text-holder {
-	padding-bottom: 2.1rem;
+	padding-bottom: 4.2rem;
+}
+@media screen and (min-width: 500px) {
+	.text-holder {
+		padding-bottom: 2.1rem;
+	}
 }
 @media screen and (min-width: 40em) {
 	.text-holder {
@@ -470,7 +472,7 @@ main {
 }
 
 .text-holder cite {
-	font-size: .6em;
+	font-size: 0.6em;
 }
 /* ========================== */
 /* FOOTER CONTAINER */
