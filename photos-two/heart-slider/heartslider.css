@@ -41,12 +41,11 @@
 	align-items: flex-end;
 	height: 100%;
 }
-@media screen and (min-width:750ox) {
+@media screen and (min-width: 750ox) {
 	.heart-slideshow .heart-slide {
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
-		
 	}
 }
 .heart-slide[tab-index="-1"] {
@@ -55,20 +54,20 @@
 
 .heart-slide .image-holder {
 	pointer-events: none;
-	width: calc(100vh - 26rem);
+
+	width: calc(180vh * 0.242);
+	width: calc(180svh * 0.242);
 	height: 100%;
 	margin: 0;
 	position: relative;
 }
-@media screen and (min-width:40em) {
-	.heart-slide .image-holder{
-	width: calc(100vh - 24rem);
+@media screen and (min-width: 40em) {
+	.heart-slide .image-holder {
 		margin-left: auto;
 	}
 }
 
 .heart-slide img {
-
 	display: block;
 	height: 100%;
 	width: 100%;
